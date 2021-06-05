@@ -1,2 +1,2 @@
 # iOs-Weather
-Ios weather for shortcut
+Ios weather for shortcuts
