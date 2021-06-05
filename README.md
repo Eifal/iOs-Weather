@@ -1,2 +1,2 @@
 # iOs-Weather
-Ios weather for shortcuts
+Ios weather theme for WeatherHTML shortcut
