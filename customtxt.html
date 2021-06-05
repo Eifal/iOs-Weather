@@ -1,0 +1,181 @@
+<div id="custom1">Eifal's  iPhone</div>
+<div id="custom2">Will be filled up via JS.</div>
+<div id="custom3personal">Today</div>
+<div id="custom4"> </div>
+<div id="custom5greetings2">Will be filled up via JS.</div> 
+<div id="custom6descbox">Will be filled up via JS.</div>
+<div id="custom7update">Will be filled up via JS.</div>  
+<div id="calheader">Your next events</div>
+<div id="todayheader">Today</div>
+<div id="tomorrowheader">Tomorrow</div>
+<div id="updateTXT">last update: </div>
+<div id="highTXT">⇡: </div>
+<div id="lowTXT">⇣: </div>
+<div id="feelslikeTXT">feels like: </div>
+<div id="airTXT">air: </div>
+<div id="dewptTXT">dew point: </div>
+<div id="humidityTXT">humidity: </div>
+<div id="pressureTXT">pressure: </div>
+<div id="sunriseTXT">⇡ </div>
+<div id="sunsetTXT">⇣ </div>
+<div id="precTXT">rain: </div>
+<div id="precamountTXT">precipitation: </div>
+<div id="UVTXT">UV-index: </div>
+<div id="visibilityTXT">view: </div>
+<div id="windspeedTXT">wind: </div>
+<div id="myGradient"></div>
+<div id="myBattery"></div>
+<!-- you can add more divs here -->
+
+
+<!-- lazy Eric using jQuery from time to time ;) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous"></script>
+   
+<!-- for date formatting load library https://momentjs.com -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<div id="WeekCal"></div>
+     
+<!-- Set some Color handling -->	
+
+<script>
+    // wait for all DOMs loaded
+    document.addEventListener("DOMContentLoaded", function(event) { 
+        // Set random colored shadow for and asing to IDs
+        function randomNumber(min, max) {
+            return parseInt(Math.floor(Math.random() * (max - min)) + min);
+        }
+        var colorarray = ["#f6091a"];
+        
+        var colorarraylighter = ["#ef024b"];
+        
+        var random=randomNumber(0, 1);
+        var colorstring = colorarray[random];
+        var colorstring2 = colorarraylighter[random];
+    
+
+
+        // Date Formating
+        var now = new Date();
+        var nowhr = now.getHours();
+        var nowday = now.getDate();
+        var getlanguage = navigator.language || navigator.userLanguage;
+        var language = getlanguage.split('-');
+        moment.locale(language[0]);
+        var date = moment(); //Get the current date
+        
+        var dateformat1 = date.format(date1); 
+        var dateformat2 = date.format(date2); 
+        var dateformat3 = date.format(date3); 
+
+        document.getElementById("date1").innerHTML = dateformat1;
+        document.getElementById("date2").innerHTML = dateformat2;
+        document.getElementById("date3").innerHTML = dateformat3;
+
+
+        // Week LineCal 
+
+        var startDate = moment().startOf('week');
+        startDate.startOf('day');
+        startDate.subtract(1, 'days');
+        var table = "<table id='WeekCalTable'>";
+        var table = table + "<tr>";
+        
+        var j = 0;
+        var startDate0 = moment().startOf('week');
+        startDate0.startOf('day');
+        startDate0.subtract(1, 'days');
+        for (i = 0; i < 7; i++) { 
+            var dayrunner0 = startDate0.add(1, 'days').format("D");
+            if (dayrunner0==nowday) { j= i;}
+        }
+        for (i = 0; i < 7; i++) { 
+         
+          if (i == j) {
+            var table = table + "<td class='weekcal' align='center' valign='center'><span style='color: "+colorstring2+"; text-shadow: 0 0 3vw "+colorstring+", 0 0 5vw "+colorstring+", 0 0 7vw "+colorstring+";'>";
+        } else {
+            var table = table + "<td class='weekcal' align='center' valign='center'><span>";
+        }
+
+          var dayrunner = startDate.add(1, 'days').format("ddd");
+          var table = table + dayrunner;
+          var table = table + "</span></td>";
+         
+        }
+        
+        var table = table + "</tr>";
+
+        var startDate2 = moment().startOf('week');
+        startDate2.startOf('day');
+        startDate2.subtract(1, 'days');
+        
+
+
+        var table = table + "</table>";
+        $('#WeekCal').append(table);
+        
+
+         // define timed greetings
+
+        var now = new Date();
+        var nowhr = now.getHours();
+
+
+        // use hour1greet, ... and username values from config.js
+        if(nowhr <hour1greet){
+            document.getElementById("custom5greetings2").innerHTML = "Dream sweet, "+username+".";
+            document.getElementById("custom2").innerHTML = "Good Night!";
+        }else if(nowhr<hour2greet){
+            document.getElementById("custom5greetings2").innerHTML = username+", good morning.";
+            document.getElementById("custom2").innerHTML = "Coffee now!";
+        }else if(nowhr<hour3greet){
+            document.getElementById("custom5greetings2").innerHTML = "Grab some food, "+username+".";
+            document.getElementById("custom2").innerHTML = "Enjoy your day..";
+        }else if(nowhr<hour4greet){
+            document.getElementById("custom5greetings2").innerHTML = "Hej, "+username+".";
+            document.getElementById("custom2").innerHTML = "Coffee break!";
+        }else if(nowhr<hour5greet){
+            document.getElementById("custom5greetings2").innerHTML = "Relax, "+username+".";
+            document.getElementById("custom2").innerHTML = "Have a nice evening!";
+        }else{
+            document.getElementById("custom5greetings2").innerHTML = "Sleep well, "+username+".";
+            document.getElementById("custom2").innerHTML = "Dream sweet!";
+        }
+
+        // set calendar header
+        if (todayentries===1) {
+            document.getElementById("todayheader").innerHTML = "<span style='color: "+colorstring2+"; text-shadow: 0 0 3vw "+colorstring+";'>" +todayentries + "</span> Event(s) today:";
+        } else {
+            document.getElementById("todayheader").innerHTML = "<span style='color: "+colorstring2+"; text-shadow: 0 0 3vw "+colorstring+";'>" +todayentries + "</span> Event(s) today:";
+        }
+        if (tomorrowentries===1) {
+            document.getElementById("tomorrowheader").innerHTML = "<span style='color: "+colorstring2+"; text-shadow: 0 0 3vw "+colorstring+";'>" + tomorrowentries + "</span> Event(s) tomorrow:";
+        } else {
+            document.getElementById("tomorrowheader").innerHTML = "<span style='color: "+colorstring2+"; text-shadow: 0 0 3vw "+colorstring+";'>" + tomorrowentries + "</span> Event(s) tomorrow:";
+        }
+
+        
+        // now define some textstrings with weather data
+      
+        var descstring = document.getElementById("desc").innerHTML;
+        var tempstring = document.getElementById("temp").innerHTML;
+        var citystring = document.getElementById("city").innerHTML;
+        var highstring = document.getElementById("high").innerHTML;
+        var lowstring = document.getElementById("low").innerHTML;
+        var precstring = document.getElementById("prec").innerHTML;
+    
+        // var citystring = "Deutschland";
+        /*document.getElementById("custom6").innerHTML = "Wer andauernd begreift, was er tut, bleibt unter seinem Niveau.";*/
+
+        document.getElementById("custom6descbox").innerHTML = "The Weather in " + citystring + " ... " + descstring + " with " + tempstring + ". " + "Today's high will be at " + highstring + " and the low at " + lowstring + ". " + "The probability of rain is at " + precstring + ".";
+
+        document.getElementById("myBattery").innerHTML = "Battery at " + batterylevel + "%";
+
+        var updatestring = document.getElementById("update").innerHTML;
+        document.getElementById("custom7update").innerHTML = "Last updated at " + updatestring;
+
+
+    });
+</script>
+
