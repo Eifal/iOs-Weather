@@ -1,0 +1,2133 @@
+
+
+@font-face {
+  font-family: 'Monoton';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/monoton/v10/5h1aiZUrOngCibe4TkHLQka4BU4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/robotocondensed/v19/ieVl2ZhZI2eCN5jzbjEETS9weq8-19K7DQk6YvM.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+body {
+      background: hsl(210, 30%, 0%) radial-gradient( hsl(210, 30%, 20%), hsl(210, 30%, 0%));
+      color:#ffffff;
+      text-align: center;
+      font-family: 'Montserrat-ExtraLight', 'Roboto Condensed', system-ui;
+      width: 100vw;
+      height: 100vh;
+      padding: 0;
+      margin:0;
+      font-size: 4vw;
+      overflow-x: hidden;
+      text-shadow: 1px 1px 1px rgba(0,0,0,0);
+    }
+
+/**************************************/
+/* CSS - CONTENT                      */ 
+/**************************************/
+/*   BACKGROUNDS AND OVERLAYS         */
+/*   CURRENT LOCATION                 */
+/*   ADD YOUR CUSTOM DIVS             */
+/*   CURRENT WEATHER CONDITION        */
+/*   HOURLY WEATHER FORECAST          */
+/*   DAILY WEATHER FORECAST           */
+/*   RSS-FEED                         */
+/*   CALENDER                         */
+/*   BATTERY                          */
+/*   MAP                             */
+/**************************************/
+
+
+/****************************/
+/* BACKGROUNDS AND OVERLAYS */
+/****************************/
+
+
+
+#background {
+  visibility: visible;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: auto;
+  width: 100%;
+}
+
+#TWall {
+  visibility: visible;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: auto;
+  width: 100%;
+}
+
+#WWall {
+  visibility: visible;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: auto;
+  width: 100%;
+}
+
+#overlay1 {
+  visibility: visible;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: auto;
+  width: 100%;
+}
+
+#overlay2 {
+  visibility: hidden;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: auto;
+  width: 100%;
+}
+
+#overlay3 {
+  visibility: hidden;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: auto;
+  width: 100%;
+}
+
+#SunMoon {
+  visibility: visible;
+  position: absolute;
+  top: -12.3%;
+  left: -40%; 
+  height: auto;
+  width: 80%;
+  z-index:-7;
+}
+
+#profilimg {
+  visibility: hidden;
+  position: absolute;
+  top: 31%;
+  left: 73%; 
+  height: auto;
+  width: 20%;
+}
+
+#badgeimg {
+  position: absolute;
+  top: 0%;
+  left: 0%; 
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+}
+
+#badgetxt {
+  position: absolute;
+  font-size: 2.5vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+#bgdiv {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index:-10;
+}
+
+#TWdiv {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index:-8;
+}
+
+#WWdiv {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index:-1;
+}
+#sundiv {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index:-7;
+}
+
+#profilediv {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index:4;
+}
+
+#badgediv {
+  position: absolute;
+  text-align: center;
+  top: 26%;
+  left: 50%; 
+  height: 6vw;
+  width: 6vw;
+  overflow: hidden;
+  z-index:100;
+  opacity:1;
+}
+
+#overlay1div {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index:10;
+}
+
+#overlay2div {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index:-2;
+}
+
+#overlay3div {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index:-3;
+}
+
+#myGradient {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 3%;
+  overflow: hidden;
+  opacity: 0;
+  z-index:10;
+}
+
+
+
+/****************************/
+/*     CURRENT LOCATION     */
+/****************************/
+#locdiv {
+  visibility: visible;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index:21;
+}
+#city {
+  visibility: hidden;
+  position: absolute;
+  text-align: left;
+  top: 44.5%;
+  left: 7%;
+  width: 100%;
+  height: 10%;
+  font-size: 3vw;
+  z-index: 55;
+  opacity: 1;
+}
+
+#street {
+  
+  position: absolute;
+  text-align: left;
+  top: 30%;
+  left: 14%;
+  width: 55%;
+  height: 10%;
+  font-size: 2.5vw;
+  z-index: 5;
+  opacity: 0;
+
+}
+
+#state {
+  
+  position: absolute;
+  text-align: left;
+  top: 32%;
+  left: 14%;
+  width: 35%;
+  height: 10%;
+  font-size: 2.5vw;
+  z-index: 5;
+  opacity: 0;
+}
+
+#country {
+  
+  position: absolute;
+  text-align: left;
+  top: 34%;
+  left: 14%;
+  width: 35%;
+  height: 10%;
+  font-size: 2.5vw;
+  z-index: 5;
+  opacity: 0;
+}
+
+#update {
+  visibility: visible;
+  position: absolute;
+  text-align: left;
+  top: 90%;
+  left: 10%;
+  width: 100%;
+  height: 100px;
+  font-size: 2.2vw;
+  text-shadow: #000000 0px 1px 2px;
+  opacity: 0;
+  z-index: 100;
+}
+
+#updateTXT {
+  visibility: hidden;
+  position: absolute;
+  text-align: left;
+  top: 83%;
+  left: 10%;
+  width: 100%;
+  height: 10px;
+  font-size: 2.2vw;
+  color: #444;
+  text-shadow: #000000 0px 1px 2px;
+  z-index: 100;
+  }
+
+
+/****************************/
+/*   ADD YOUR CUSTOM DIVS   */
+/****************************/
+
+#custom1 {
+  visibility: visible;
+  position: absolute;
+  text-align: left;
+  top: 73%;
+  left: -15%;
+  font-size: 4vw;
+  font-family: 'Outer Sans Outline Black';
+  color: #fff;
+  text-shadow: 0px 0px 7px #f6091a, 0px 0px 9px #f6091a, 0px 0px 12px #f6091a;
+  -webkit-transform: rotate(-90deg);
+  z-index: -1;
+}
+
+#custom2 {
+  visibility: visible;
+  position: absolute;
+  text-align: center;
+  top: 40%;
+  left: 5%;
+  width: 90%;
+  height: 10%;
+  font-size: 5vw;
+  color: #262626;
+  text-shadow: 0px 0px 0px #f6a609;
+  font-family: 'Autograf_PersonalUseOnly';
+  -webkit-transform: rotate(0deg);
+  z-index: 3;
+}
+
+#custom3personal {
+  visibility: visible;
+  position: relative;
+  text-align: center;
+  top: 54%;
+  left: 6%;
+  display: inline-table;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 2.5vw;
+  font-family: 'Montserrat-Bold';
+  color: #fff;
+  background-color: #222;
+  border-radius: 10%;
+  padding: 10px;
+  text-shadow: 0px 0px 0px #f6091a;
+  -webkit-transform: rotate(0deg);
+  z-index: 3;
+}
+
+#custom4 {
+  visibility: hidden;
+  position: absolute;
+  text-align: right;
+  top: 32%;
+  right: 37%;
+  width: 35%;
+  height: 10%;
+  font-size: 2.5vw;
+  opacity: 0;
+  z-index: 5;
+}
+
+#custom5greetings2 {
+  visibility: hidden;
+  position: absolute;
+  text-align: left;
+  top: 53%;
+  left: 8%;
+  font-size: 4vw;
+  letter-spacing: 1px;
+  width: 100%;
+  font-family: 'Bebas';
+  color: #aec4ed;/*set via JS*/
+  text-shadow: 0 0 3vw #427eeb; /*set via JS*/
+  -webkit-transform: rotate(0deg);
+  z-index: 5;
+}
+
+#custom6descbox {
+  visibility: visible;
+  position: absolute;
+  text-align: center;
+  top: 60%;
+  left: 20%;
+  width: 60%;
+  height: 10%;
+  font-size: 2.2vw;
+  color: #222;
+  opacity: 1;
+  z-index: 5;
+}
+
+#custom7update{
+  visibility: visible;
+  position: absolute;
+  text-align: left;
+  top: 83.7%;
+  left: 10%;
+  width: 100%;
+  height: 100px;
+  font-size: 2.2vw;
+  color: #444;
+  text-shadow: #000000 0px 1px 2px;
+  opacity: 1;
+  z-index: 10;
+}
+
+#date1 {
+  visibility: visible;
+  position: absolute;
+  text-align: center;
+  top: 45%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  font-size: 6vw;
+  color: #262626;
+  font-family: 'Montserrat-Bold';
+  text-shadow: 0 0 0vw #427eeb;
+  -webkit-transform: rotate(0deg);
+  z-index: 1;
+  opacity:1;
+}
+
+#date2 {
+  visibility: visible;
+  position: absolute;
+  text-align: center;
+  top: 49.5%;
+  left: 5%;
+  width: 90%;
+  height: 10%;
+  font-size: 4vw;
+  color: #262626;
+  text-shadow: 0px 0px 0px #f6091a;
+  -webkit-transform: rotate(0deg);
+  z-index: 3;
+}
+
+#date3 {
+  visibility: hidden;
+  position: absolute;
+  text-align: center;
+  top: 42%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  font-size: 40vw;
+  color: #888;
+  text-shadow: 0px 0px 0px #111111;
+  -webkit-transform: rotate(0deg);
+  z-index: 0;
+  opacity:0.3;
+}
+
+#myBattery {
+  visibility: visible;
+  position: absolute;
+  text-align: left;
+  top: 81%;
+  left: 10%;
+  width: 100%;
+  height: 10%;
+  font-size: 2.2vw;
+  color: #333333;
+  text-shadow: #000000 0px 1px 2px;
+  z-index: 5;
+  opacity: 0;
+}
+
+
+/*****************************/
+/* CURRENT WEATHER CONDITION */
+/*****************************/
+#icon {
+  visibility: hidden;
+  position: absolute;
+  top: 41.5%;
+  left: 30%;
+  height: auto;
+  width: 22%;
+  opacity: 1;
+  -webkit-filter: drop-shadow(0 0.2rem 0.25rem rgba(0, 0, 0, 0.2));
+  /* -webkit-filter: drop-shadow(0px 0px 6px #f6a609);*/
+  z-index:20;
+}
+
+#temp {
+  visibility: hidden;
+  position: relative;
+  top: 44.5%;
+  left: 10%;
+  width: 45px;
+  height: 40px;
+  display: inline-table;
+  vertical-align: middle;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 0 3vw #ef024b;
+  background-color: #ef024b;
+  border-radius: 50%;
+  padding-top: 5px;
+  /*border: 0.4vw solid #ef024b;
+  border-radius: 50px 50px 50px 50px;*/
+  font-size: 25px;
+  font-family: 'Hurtmold';
+  /*text-shadow: 0px 0px 7px #f6a609, 0px 0px 6px #f6a609, 0px 0px 9px #f6a609;*/
+  z-index: 50;
+  
+}
+
+#feelslike {
+  visibility: visible;
+  position: absolute;
+  top: 37%;
+  left: 50.5%;
+  width: 100%;
+  height: 10%;
+  text-align: left;
+  font-size: 2.5vw;
+  z-index: 5;
+  opacity: 0;
+}
+
+#feelslikeTXT {
+  position: absolute;
+  top: 37%;
+  left: 0%;
+  text-align: right;
+  width: 49.5%;
+  height: 10%;
+  font-size: 2.5vw;
+  z-index: 5;
+  opacity: 0;
+}
+
+#desc {
+  visibility: hidden;
+  position: absolute;
+  text-align: left;
+  top: 47.6%;
+  left: 7%;
+  width: 100%;
+  height: 10%;
+  font-size: 3vw;
+  z-index: 21;
+}
+
+#high {
+  visibility: hidden;
+  position: absolute;
+  text-align: right;
+  top: 45%;
+  left: 0%;
+  width: 76%;
+  height: 10%;
+  font-size: 3vw;
+  z-index: 5;
+}
+
+#highTXT {
+  visibility: hidden;  
+  position: absolute;
+  text-align: right;
+  top: 45%;
+  left: 0%;
+  width: 69%;
+  height: 10%;
+  font-size: 3vw;
+  z-index: 5;
+}
+
+#low {
+  visibility: hidden;
+  position: absolute;
+  text-align: right;
+  top: 47.6%;
+  left: 0;
+  width: 76%;
+  height: 10%;
+  font-size: 3vw;
+  z-index: 5;
+}
+
+#lowTXT {
+  visibility: hidden;
+  position: absolute;
+  text-align: right;
+  top: 47.6%;
+  left: 0%;
+  width: 69%;
+  height: 10%;
+  font-size: 3vw;
+  z-index: 5;
+}
+
+
+#UVindex {
+  
+  position: absolute;
+  text-align: right;
+  top: 25%;
+  right: 14%;
+  width: 35%;
+  height: 10%;
+  font-size: 2.5vw;
+  z-index: 5;
+  opacity: 0;
+}
+
+#UVTXT {
+  position: absolute;
+  top: 25%;
+  right: 28%;
+  text-align: right;
+  width: 49.5%;
+  height: 10%;
+  
+  font-size: 2.5vw;
+  z-index: 5;
+  opacity: 0;
+}
+
+
+#prec {
+  visibility: hidden;
+  position: absolute;
+  text-align: right;
+  top: 32%;
+  right: 14%;
+  width: 35%;
+  height: 10%;
+  font-size: 2.5vw;
+  z-index: 5;
+}
+
+#precTXT {
+  position: absolute;
+  top: 32%;
+  right: 28%;
+  text-align: right;
+  width: 49.5%;
+  height: 10%;
+  
+  font-size: 2.5vw;
+  z-index: 5;
+  opacity: 0;
+}
+
+#precammount {
+  
+  position: absolute;
+  text-align: right;
+  top: 8%;
+  right: 14%;
+  width: 35%;
+  height: 10%;
+  font-size: 2.5vw;
+  z-index: 5;
+  opacity: 0;
+}
+
+#precamountTXT{
+  position: absolute;
+  top: 8%;
+  right: 28%;
+  text-align: right;
+  width: 49.5%;
+  height: 10%;
+  
+  font-size: 2.5vw;
+  z-index: 5;
+  opacity: 0;
+}
+
+#visibility {
+   
+  position: absolute;
+  text-align: right;
+  top: 23%;
+  right: 14%;
+  width: 35%;
+  height: 10%;
+  font-size: 2.5vw;
+  z-index: 5;
+  opacity: 0;
+}
+
+#visibilityTXT {
+  position: absolute;
+  top: 23%;
+  right: 28%;
+  text-align: right;
+  width: 49.5%;
+  height: 10%;
+  
+  font-size: 2.5vw;
+  z-index: 5;
+  opacity: 0;
+}
+
+#pressure {
+   
+  position: absolute;
+  text-align: right;
+  top: 21%;
+  right: 14%;
+  width: 35%;
+  height: 10%;
+  font-size: 2.5vw;
+  z-index: 5;
+  opacity:0;
+}
+
+#pressureTXT {
+  position: absolute;
+  top: 21%;
+  right: 28%;
+  text-align: right;
+  width: 49.5%;
+  height: 10%;
+  
+  font-size: 2.5vw;
+  z-index: 5;
+  opacity: 0;
+}
+
+#dewpt {
+   
+  position: absolute;
+  text-align: right;
+  top: 19%;
+  right: 14%;
+  width: 35%;
+  height: 10%;
+  font-size: 2.5vw;
+  z-index: 5;
+  opacity: 0;
+}
+
+#dewptTXT {
+  position: absolute;
+  top: 19%;
+  right: 28%;
+  text-align: right;
+  width: 49.5%;
+  height: 10%;
+  
+  font-size: 2.5vw;
+  z-index: 5;
+  opacity: 0;
+}
+
+#humidity {
+  
+  position: absolute;
+  text-align: right;
+  top: 17%;
+  right: 14%;
+  width: 35%;
+  height: 10%;
+  font-size: 2.5vw;
+  z-index: 5;
+  opacity: 0;
+}
+
+#humidityTXT {
+  position: absolute;
+  top: 17%;
+  right: 28%;
+  text-align: right;
+  width: 49.5%;
+  height: 10%;
+  
+  font-size: 2.5vw;
+  z-index: 5;
+  opacity: 0;
+}
+
+#air {
+  position: absolute;
+  text-align: right;
+  top: 15%;
+  right: 14%;
+  width: 35%;
+  height: 10%;
+  font-size: 2.5vw;
+  z-index: 5;
+  opacity: 0;
+}
+
+#airTXT {
+  position: absolute;
+  top: 15%;
+  right: 28%;
+  text-align: right;
+  width: 49.5%;
+  height: 10%;
+  
+  font-size: 2.5vw;
+  z-index: 5;
+  opacity: 0;
+}
+
+#windspeed {
+  
+  position: absolute;
+  text-align: right;
+  top: 34%;
+  right: 14%;
+  width: 35%;
+  height: 10%;
+  font-size: 2.5vw;
+  z-index: 5;
+  opacity: 0;
+}
+
+#windspeedTXT {
+  position: absolute;
+  top: 34%;
+  right: 28%;
+  text-align: right;
+  width: 49.5%;
+  height: 10%;
+  
+  font-size: 2.5vw;
+  z-index: 5;
+  opacity: 0;
+}
+
+#sunrise {
+  visibility: hidden;
+  position: absolute;
+  text-align: left;
+  top: 75.4%;
+  left: 14%;
+  width: 35%;
+  height: 10%;
+  font-size: 2.5vw;
+  z-index: 5;
+  opacity: 1;
+}
+
+#sunriseTXT {
+  visibility: hidden;
+  position: absolute;
+  top: 75.2%;
+  left: 10%;
+  text-align: left;
+  width: 49.5%;
+  height: 10%;
+  font-size: 2.5vw;
+  z-index: 5;
+  opacity: 1;
+}
+
+#sunset {
+  visibility: hidden;
+  position: absolute;
+  text-align: left;
+  top: 75.4%;
+  left: 26%;
+  width: 35%;
+  height: 10%;
+  font-size: 2.5vw;
+  z-index: 5;
+  opacity: 1;
+}
+
+#sunsetTXT {
+  visibility: hidden;
+  position: absolute;
+  top: 75.2%;
+  left: 22%;
+  text-align: left;
+  width: 49.5%;
+  height: 10%;
+  
+  font-size: 2.5vw;
+  z-index: 5;
+  opacity: 1;
+}
+
+/***************************/
+/* RSS-FEED                */
+/***************************/
+
+
+#RSSContainer {
+  visibility: visible; /* will be set via config.js */
+  position: absolute;
+  top: 46%;
+  left: 7%;
+  height: 20%;
+  width: 86%;
+  opacity:1;
+  border: 0px solid red;
+  z-index:2;
+}
+
+#RSSImgDiv {
+ 
+  position: absolute;
+  top: 40%;
+  left: 0%;
+  height: 33%;
+  width: 33%;
+  overflow: visible;
+  
+  border-radius: 2px;
+ 
+}
+
+#RSSImg {
+ 
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: auto; 
+  
+  width: 100%;
+}
+
+#RSSTitle {
+  
+  position: absolute;
+  text-align: left;
+  vertical-align: top;
+  
+  top: 10%;
+  left: 0%;
+  width: 100%;
+  height: 7%;
+  line-height: 3vw;
+  font-size: 3vw;
+  
+}
+
+#RSSText {
+ 
+  position: absolute;
+  text-align: left;
+  top: 33.3%;
+  left: 35%;
+  width: 65%;
+  
+  font-size: 1.8vw;
+  color: #ffffff;
+}
+
+#RSSDate {
+ 
+  position: absolute;
+  text-align: center;
+  top: 71%;
+  left: cal(0%+2px);
+  width: 33%;
+  height: auto;
+  font-size: 2vw;
+  line-height: 2.5vw;
+  color: #000000;
+  background-color: rgba(255,255,255,0.4);
+}
+
+/***************************/
+/* CALENDER                */
+/***************************/
+
+#WeekCal {
+  visibility: visible;
+  position: absolute;
+  top: 50.5%;
+  left: 7.5%;
+  height: 100%;
+  width: 86%;
+  font-family: 'Hurtmold';
+  opacity:0;
+  z-index:5;
+}
+
+#WeekCalTable {
+  table-layout: fixed;
+  width: 100%;
+  margin: 0 auto;
+  font-size:3vw;
+}
+
+.weekcal {
+  width: 13%;
+  padding-left: 3.0%;
+  padding-right: 3.0%;
+  padding-top: 0%;
+  padding-bottom: 0%;
+  text-align: center;
+  vertical-align: middle;  
+}
+
+#CalContainer {
+  visibility: visible;
+  position: absolute;
+  top: -10%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  opacity:1;
+  
+  z-index:5;
+}
+
+#calyear {
+  position: absolute;
+  
+background-color:darkred;
+right:14%;
+top: 40%;
+width:18%;
+font-size:5vw;
+padding-left:2vw; 
+padding-right:2vw; 
+padding-top:0vw; 
+padding-bottom:0vw; 
+border:1px dashed white; 
+-webkit-border-radius:4px; 
+-webkit-box-shadow:0px 0px 6px 6px darkred;
+ z-index:2; 
+ opacity: 0;
+}
+
+ #calmonth {
+  position: absolute;
+  
+left:14%;
+top: 41%;
+width:15%;
+font-size:10vw;
+z-index:1;
+  opacity: 0;
+} 
+
+
+
+#monthview {
+  position: absolute;
+  
+  left:14%;
+  top: 47%;
+  width:72%;
+  font-size:3vw;
+  opacity:1;
+  z-index:1;
+}
+
+/* define table style for month calendar */
+
+table .outer{
+  border-spacing: 0%;
+  width: 100;
+  border: 0px solid black;
+
+}
+
+table .inner{
+  border-spacing: 0%;
+  width: 100;
+  border: 0px solid black;
+
+}
+
+td .days {
+  width: 15%;
+  padding-left: 3.8%;
+  padding-right: 3.8%;
+  padding-top: 0%;
+  padding-bottom: 0%;
+  text-align: center;
+  
+}
+
+
+td .daysactive {
+  width: 15%;
+  text-align: center;
+  
+  color: darkred;
+  border: 0px solid darkred;
+}
+
+.weekdayactive {
+  
+  color: darkred;
+}
+
+#calheader {
+  
+  position: absolute;
+  text-align:left;
+  font-size:3vw;
+  line-height: 3vw;
+  left:7%;
+  top: 63%;
+  width:100%;
+  opacity:0;
+}
+#todayheader {
+ 
+  position: absolute;
+  text-align:left;
+  font-size:3vw;
+  line-height: 3vw;
+  left:7%;
+  top: 66.5%;
+  width:100%;
+  opacity:0;
+}
+
+  #tomorrowheader {
+   
+  position: absolute;
+  text-align:left;
+  left:7%;
+  top: 76.5%;
+  width:100%;
+  font-size:3vw;
+  opacity:0;
+}
+   
+#todayentries {
+  position: absolute;
+  text-align:left;
+  left:7%;
+  top: 69%;
+  width:100%;
+  font-size:2vw;
+  
+  }
+  
+#tomorrowentries {
+  position: absolute;
+  text-align:left;
+  left:7%;
+  top: 79%;
+  width:100%;
+  font-size:2vw;
+ 
+ }
+
+.caltitle {
+  
+  font-size:2vw;
+  line-height: 3.5vw;
+  
+} 
+.caltime {
+  
+  font-size:2vw;
+  line-height: 3.5vw;
+  color: #fff;
+  
+} 
+
+.starttime {
+  
+  font-size:2vw;
+  line-height: 3.5vw;
+  color: darkred;
+}
+
+
+/***************************/
+/* BATTERY                 */
+/***************************/
+
+/* credits to */
+/* https://www.gotoquiz.com/web-coding/web-design/really-cool-progressresult-bars-in-pure-css/ */
+
+#battery {
+  visibility: visible; /* will be set via config.js */
+  position: absolute;
+  top: 68%;
+  left: 40%;
+  height: 3%;
+  width: 30%;
+  opacity:1;
+  z-index:2;
+}
+
+.barOuter {
+    background: #252525;
+    border: 1px solid #000;
+    border-radius: 3px;
+    box-shadow: inset 1px 1px 3px 0 rgba(0, 0, 0, 0.8), 1px 1px 0 0 rgba(255, 255, 255, 0.12);
+    height: 6px;
+    width: 85%;
+    margin-bottom: 10px;
+    position: relative;
+}
+ 
+.barLabel {
+    color: #fff;
+    /*text-shadow: 0px 0px 4px #f6a609, 0px 0px 3px #f6a609, 0px 0px 5px #f6a609;*/
+    font-size: 11px;
+    position: absolute;
+    right: 125px;
+    top: -4.5px;
+    color: #222;
+    font-family: 'Montserrat-Bold';
+}
+ 
+.barInner {
+    background-color: #fceabb;
+    border-right: 1px solid #090909;
+    border-radius: 3px;
+    height: 100%;
+    width: 50%;
+    background-size: 100% 100%, 20px 20px, 100% 100%;
+    background-image:
+        linear-gradient(to right, #4d8c16, #4d8c16);
+}
+
+/***************************/
+/* Map                 */
+/***************************/
+
+#MapContainer {
+  visibility: visible; /* will be set via config.js */
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  opacity:1;
+  z-index:2;
+}
+
+#MapDiv {
+ 
+  position: absolute;
+  top: 55%;
+  left: 20%;
+  height: 50%;
+  width: 60%;
+  overflow: hidden;
+  
+}
+
+#map {
+ 
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: auto; 
+  border-radius: 30px;
+  overflow: hidden;
+  /*box-shadow: 5px 5px 5px rgba(0,0,0,0.3);*/
+  box-shadow: 0 15px 6px -6px rgba(0,0,0,0.4);
+  width: 100%;
+}
+
+
+/***************************/
+/* HOURLY WEATHER FORECAST */
+/***************************/
+
+#hourlyC {
+  visibility: visible;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  opacity:1 ; /* will be set in config.js */
+  z-index:2;
+}
+
+#hour0 {
+  visibility: visible;
+  position: absolute;
+  text-align: center;
+  top: 40%;
+  left: 14%;
+  width: 12%;
+  height: 10%;
+  font-size: 3vw;
+}
+
+#hour1 {
+  visibility: visible;
+  position: absolute;
+  text-align: center;
+  top: 40%;
+  left: 26%;
+  width: 12%;
+  height: 10%;
+  font-size: 3vw;
+}
+
+#hour2 {
+  visibility: visible;
+  position: absolute;
+  text-align: center;
+  top: 40%;
+  left: 38%;
+  width: 12%;
+  height: 10%;
+  font-size: 3vw;
+}
+
+#hour3 {
+  visibility: visible;
+  position: absolute;
+  text-align: center;
+  top: 40%;
+  left: 50%;
+  width: 12%;
+  height: 10%;
+  font-size: 3vw;
+}
+
+#hour4 {
+  visibility: visible;
+  position: absolute;
+  text-align: center;
+  top: 40%;
+  left: 62%;
+  width: 12%;
+  height: 10%;
+  font-size: 3vw;
+}
+
+#hour5 {
+  visibility: visible;
+  position: absolute;
+  text-align: center;
+  top: 40%;
+  left: 74%;
+  width: 12%;
+  height: 10%;
+  font-size: 3vw;
+}
+
+
+#prech0 {
+  visibility: visible;
+  position: absolute;
+  text-align: center;
+  top: 46%;
+  left: 19%;
+  width: 12%;
+  height: 10%;
+  font-size: 2vw;
+  color: #35acce;
+}
+
+#prech1 {
+  visibility: visible;
+  position: absolute;
+  text-align: center;
+  top: 46%;
+  left: 31%;
+  width: 12%;
+  height: 10%;
+  font-size: 2vw;
+  color: #35acce;
+}
+
+#prech2 {
+  visibility: visible;
+  position: absolute;
+  text-align: center;
+  top: 46%;
+  left: 43%;
+  width: 12%;
+  height: 10%;
+  font-size: 2vw;
+  color: #35acce;
+}
+
+#prech3 {
+  visibility: visible;
+  position: absolute;
+  text-align: center;
+  top: 46%;
+  left: 55%;
+  width: 12%;
+  height: 10%;
+  font-size: 2vw;
+  color: #35acce;
+}
+
+#prech4 {
+  visibility: visible;
+  position: absolute;
+  text-align: center;
+  top: 46%;
+  left: 67%;
+  width: 12%;
+  height: 10%;
+  font-size: 2vw;
+  color: #35acce;
+}
+
+#prech5 {
+  visibility: visible;
+  position: absolute;
+  text-align: center;
+  top: 46%;
+  left: 79%;
+  width: 12%;
+  height: 10%;
+  font-size: 2vw;
+  color: #35acce;
+}
+
+
+#temphour0 {
+  visibility: visible;
+  position: absolute;
+  text-align: center;
+  top: 48%;
+  left: 14%;
+  width: 12%;
+  height: 10%;
+  font-size: 3vw;
+}
+
+#temphour1 {
+  visibility: visible;
+  position: absolute;
+  text-align: center;
+  top: 48%;
+  left: 26%;
+  width: 12%;
+  height: 10%;
+  font-size: 3vw;
+}
+
+#temphour2 {
+  visibility: visible;
+  position: absolute;
+  text-align: center;
+  top: 48%;
+  left: 38%;
+  width: 12%;
+  height: 10%;
+  font-size: 3vw;
+}
+
+#temphour3 {
+  visibility: visible;
+  position: absolute;
+  text-align: center;
+  top: 48%;
+  left: 50%;
+  width: 12%;
+  height: 10%;
+  font-size: 3vw;
+}
+
+#temphour4 {
+  visibility: visible;
+  position: absolute;
+  text-align: center;
+  top: 48%;
+  left: 62%;
+  width: 12%;
+  height: 10%;
+  font-size: 3vw;
+}
+
+#temphour5 {
+  visibility: visible;
+  position: absolute;
+  text-align: center;
+  top: 48%;
+  left: 74%;
+  width: 12%;
+  height: 10%;
+  font-size: 3vw;
+}
+
+#iconh0 {
+  visibility: visible;
+  position: absolute;
+  top: 42%;
+  left: 14%;
+  height: auto;
+  width: 12%;
+}
+
+#iconh1 {
+  visibility: visible;
+  position: absolute;
+  top: 42%;
+  left: 26%;
+  height: auto;
+  width: 12%;
+}
+
+#iconh2 {
+  visibility: visible;
+  position: absolute;
+  top: 42%;
+  left: 38%;
+  height: auto;
+  width: 12%;
+}
+#iconh3 {
+  visibility: visible;
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  height: auto;
+  width: 12%;
+}
+#iconh4 {
+  visibility: visible;
+  position: absolute;
+  top: 42%;
+  left: 62%;
+  height: auto;
+  width: 12%;
+}
+#iconh5 {
+  visibility: visible;
+  position: absolute;
+  top: 42%;
+  left: 74%;
+  height: auto;
+  width: 12%;
+}
+
+
+/***************************/
+/* DAILY WEATHER FORECAST */
+/***************************/
+
+
+#dailyC {
+  visibility: visible;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  opacity:1 ; /* will be set in config.js */
+  z-index:2;
+}
+
+#day0 {
+  visibility: visible;
+  position: absolute;
+  text-align: left;
+  top: 52%;
+  left: 14%;
+  width: 38%;
+  height: 10%;
+  font-size: 3vw;
+}
+#day1 {
+  visibility: visible;
+  position: absolute;
+  text-align: left;
+  top: 55%;
+  left: 14%;
+  width: 38%;
+  height: 10%;
+  font-size: 3vw;
+}
+#day2 {
+  visibility: visible;
+  position: absolute;
+  text-align: left;
+  top: 58%;
+  left: 14%;
+  width: 38%;
+  height: 10%;
+  font-size: 3vw;
+}
+#day3 {
+  visibility: visible;
+  position: absolute;
+  text-align: left;
+  top: 61%;
+  left: 14%;
+  width: 38%;
+  height: 10%;
+  font-size: 3vw;
+}
+#day4 {
+  visibility: visible;
+  position: absolute;
+  text-align: left;
+  top: 64%;
+  left: 14%;
+  width: 38%;
+  height: 10%;
+  font-size: 3vw;
+}
+#day5 {
+  visibility: visible;
+  position: absolute;
+  text-align: left;
+  top: 67%;
+  left: 14%;
+  width: 38%;
+  height: 10%;
+  font-size: 3vw;
+}
+#day6 {
+  visibility: visible;
+  position: absolute;
+  text-align: left;
+  top: 70%;
+  left: 14%;
+  width: 38%;
+  height: 10%;
+  font-size: 3vw;
+}
+#day7 {
+  visibility: visible;
+  position: absolute;
+  text-align: left;
+  top: 73%;
+  left: 14%;
+  width: 38%;
+  height: 10%;
+  font-size: 3vw;
+}
+#day8 {
+  visibility: visible;
+  position: absolute;
+  text-align: left;
+  top: 76%;
+  left: 14%;
+  width: 38%;
+  height: 10%;
+  font-size: 3vw;
+}
+#day9 {
+  visibility: visible;
+  position: absolute;
+  text-align: left;
+  top: 79%;
+  left: 14%;
+  width: 38%;
+  height: 10%;
+  font-size: 3vw;
+}
+
+#precd0 {
+  visibility: visible;
+  position: absolute;
+  text-align: left;
+  top: 52.5%;
+  left: 48%;
+  width: 38%;
+  height: 10%;
+  font-size: 1.5vw;
+  color: #35acce;
+}
+#precd1 {
+  visibility: visible;
+  position: absolute;
+  text-align: left;
+  top: 55.5%;
+  left: 48%;
+  width: 38%;
+  height: 10%;
+  font-size: 1.5vw;
+  color: #35acce;
+}
+
+#precd2 {
+  visibility: visible;
+  position: absolute;
+  text-align: left;
+  top: 58.5%;
+  left: 48%;
+  width: 38%;
+  height: 10%;
+  font-size: 1.5vw;
+  color: #35acce;
+}
+
+#precd3 {
+  visibility: visible;
+  position: absolute;
+  text-align: left;
+  top: 61.5%;
+  left: 48%;
+  width: 38%;
+  height: 10%;
+  font-size: 1.5vw;
+  color: #35acce;
+}
+
+#precd4 {
+  visibility: visible;
+  position: absolute;
+  text-align: left;
+  top: 64.5%;
+  left: 48%;
+  width: 38%;
+  height: 10%;
+  font-size: 1.5vw;
+  color: #35acce;
+}
+
+#precd5 {
+  visibility: visible;
+  position: absolute;
+  text-align: left;
+  top: 67.5%;
+  left: 48%;
+  width: 38%;
+  height: 10%;
+  font-size: 1.5vw;
+  color: #35acce;
+}
+
+#precd6 {
+  visibility: visible;
+  position: absolute;
+  text-align: left;
+  top: 70.5%;
+  left: 48%;
+  width: 38%;
+  height: 10%;
+  font-size: 1.5vw;
+  color: #35acce;
+}
+
+#precd7 {
+  visibility: visible;
+  position: absolute;
+  text-align: left;
+  top: 73.5%;
+  left: 48%;
+  width: 38%;
+  height: 10%;
+  font-size: 1.5vw;
+  color: #35acce;
+}
+
+#precd8 {
+  visibility: visible;
+  position: absolute;
+  text-align: left;
+  top: 76.5%;
+  left: 48%;
+  width: 38%;
+  height: 10%;
+  font-size: 1.5vw;
+  color: #35acce;
+}
+
+#precd9 {
+  visibility: visible;
+  position: absolute;
+  text-align: left;
+  top: 79.5%;
+  left: 48%;
+  width: 38%;
+  height: 10%;
+  font-size: 1.5vw;
+  color: #35acce;
+}
+
+#hiday0 {
+  visibility: visible;
+  position: absolute;
+  text-align: right;
+  top: 52%;
+  right: 26%;
+  width: 38%;
+  height: 10%;
+  font-size: 3vw;
+}
+#hiday1 {
+  visibility: visible;
+  position: absolute;
+  text-align: right;
+  top: 55%;
+  right: 26%;
+  width: 38%;
+  height: 10%;
+  font-size: 3vw;
+}
+
+#hiday2 {
+  visibility: visible;
+  position: absolute;
+  text-align: right;
+  top: 58%;
+  right: 26%;
+  width: 38%;
+  height: 10%;
+  font-size: 3vw;
+}
+
+#hiday3 {
+  visibility: visible;
+  position: absolute;
+  text-align: right;
+  top: 61%;
+  right: 26%;
+  width: 38%;
+  height: 10%;
+  font-size: 3vw;
+}
+
+#hiday4 {
+  visibility: visible;
+  position: absolute;
+  text-align: right;
+  top: 64%;
+  right: 26%;
+  width: 38%;
+  height: 10%;
+  font-size: 3vw;
+}
+
+#hiday5 {
+  visibility: visible;
+  position: absolute;
+  text-align: right;
+  top: 67%;
+  right: 26%;
+  width: 38%;
+  height: 10%;
+  font-size: 3vw;
+}
+
+#hiday6 {
+  visibility: visible;
+  position: absolute;
+  text-align: right;
+  top: 70%;
+  right: 26%;
+  width: 38%;
+  height: 10%;
+  font-size: 3vw;
+}
+
+#hiday7 {
+  visibility: visible;
+  position: absolute;
+  text-align: right;
+  top: 73%;
+  right: 26%;
+  width: 38%;
+  height: 10%;
+  font-size: 3vw;
+}
+
+#hiday8 {
+  visibility: visible;
+  position: absolute;
+  text-align: right;
+  top: 76%;
+  right: 26%;
+  width: 38%;
+  height: 10%;
+  font-size: 3vw;
+}
+
+#hiday9 {
+  visibility: visible;
+  position: absolute;
+  text-align: right;
+  top: 79%;
+  right: 26%;
+  width: 38%;
+  height: 10%;
+  font-size: 3vw;
+}
+
+#loday0 {
+  visibility: visible;
+  position: absolute;
+  text-align: right;
+  top: 52%;
+  right: 14%;
+  width: 38%;
+  height: 10%;
+  font-size: 3vw;
+  color: #A5A5A5;
+}
+
+#loday1 {
+  visibility: visible;
+  position: absolute;
+  text-align: right;
+  top: 55%;
+  right: 14%;
+  width: 38%;
+  height: 10%;
+  font-size: 3vw;
+  color: #A5A5A5;
+}
+
+#loday2 {
+  visibility: visible;
+  position: absolute;
+  text-align: right;
+  top: 58%;
+  right: 14%;
+  width: 38%;
+  height: 10%;
+  font-size: 3vw;
+  color: #A5A5A5;
+}
+
+#loday3 {
+  visibility: visible;
+  position: absolute;
+  text-align: right;
+  top: 61%;
+  right: 14%;
+  width: 38%;
+  height: 10%;
+  font-size: 3vw;
+  color: #A5A5A5;
+}
+
+#loday4 {
+  visibility: visible;
+  position: absolute;
+  text-align: right;
+  top: 64%;
+  right: 14%;
+  width: 38%;
+  height: 10%;
+  font-size: 3vw;
+  color: #A5A5A5;
+}
+
+#loday5 {
+  visibility: visible;
+  position: absolute;
+  text-align: right;
+  top: 67%;
+  right: 14%;
+  width: 38%;
+  height: 10%;
+  font-size: 3vw;
+  color: #A5A5A5;
+}
+
+#loday6 {
+  visibility: visible;
+  position: absolute;
+  text-align: right;
+  top: 70%;
+  right: 14%;
+  width: 38%;
+  height: 10%;
+  font-size: 3vw;
+  color: #A5A5A5;
+}
+
+#loday7 {
+  visibility: visible;
+  position: absolute;
+  text-align: right;
+  top: 73%;
+  right: 14%;
+  width: 38%;
+  height: 10%;
+  font-size: 3vw;
+  color: #A5A5A5;
+}
+
+#loday8 {
+  visibility: visible;
+  position: absolute;
+  text-align: right;
+  top: 76%;
+  right: 14%;
+  width: 38%;
+  height: 10%;
+  font-size: 3vw;
+  color: #A5A5A5;
+}
+
+#loday9 {
+  visibility: visible;
+  position: absolute;
+  text-align: right;
+  top: 79%;
+  right: 14%;
+  width: 38%;
+  height: 10%;
+  font-size: 3vw;
+  color: #A5A5A5;
+}
+
+
+#icond0 {
+  visibility: visible;
+  position: absolute;
+  top: 51.4%;
+  left: 40%;
+  height: auto;
+  width: 7%;
+}
+
+#icond1 {
+  visibility: visible;
+  position: absolute;
+  top: 54.4%;
+  left: 40%;
+  height: auto;
+  width: 7%;
+}
+
+#icond2 {
+  visibility: visible;
+  position: absolute;
+  top: 57.4%;
+  left: 40%;
+  height: auto;
+  width: 7%;
+}
+#icond3 {
+  visibility: visible;
+  position: absolute;
+  top: 60.4%;
+  left: 40%;
+  height: auto;
+  width: 7%;
+}
+#icond4 {
+  visibility: visible;
+  position: absolute;
+  top: 63.4%;
+  left: 40%;
+  height: auto;
+  width: 7%;
+}
+#icond5 {
+  visibility: visible;
+  position: absolute;
+  top: 66.4%;
+  left: 40%;
+  height: auto;
+  width: 7%;
+}
+#icond6 {
+  visibility: visible;
+  position: absolute;
+  top: 69.4%;
+  left: 40%;
+  height: auto;
+  width: 7%;
+}
+#icond7 {
+  visibility: visible;
+  position: absolute;
+  top: 72.4%;
+  left: 40%;
+  height: auto;
+  width: 7%;
+}
+#icond8 {
+  visibility: visible;
+  position: absolute;
+  top: 75.4%;
+  left: 40%;
+  height: auto;
+  width: 7%;
+}
+
+#icond9 {
+  visibility: visible;
+  position: absolute;
+  top: 78.4%;
+  left: 40%;
+  height: auto;
+  width: 7%;
+}
+
+
